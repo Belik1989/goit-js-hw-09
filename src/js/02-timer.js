@@ -14,7 +14,7 @@ const dataSeconds = document.querySelector(`.timer [data-seconds]`);
 startBtn.classList.add("startBtn");
 const currentDate = Date.now();
 let timeToEnd = {};
-let mstimeToEnd = null;
+let msTimeToEnd = null;
 
 const options = {
     enableTime: true,
@@ -40,22 +40,22 @@ const options = {
     }
     }
     function onStartedTimer(selectedDates) {
-        let mstimeToEnd = Date.parse(selectedDates) - Date.now();
+        let msTimeToEnd = Date.parse(selectedDates) - Date.now();
         let timeToEnd = convertMs(mstimeToEnd);
         startBtn.addEventListener('click', () => {
         startBtn.setAttribute('disabled', 'disabled');
         dataTimePicker.setAttribute('disabled', 'disabled');
         timeId = setInterval(() => {
-    if (mstimeToEnd <= 0) {
+    if (msTimeToEnd <= 0) {
         clearInterval(timeId);
     return;
     }
-    timeToEnd = convertMs(mstimeToEnd);
+    timeToEnd = convertMs(msTimeToEnd);
     dataDays.textContent = timeToEnd.days.toString().padStart(2, '0')
     dataHours.textContent = timeToEnd.hours.toString().padStart(2, '0')
     dataMinutes.textContent = timeToEnd.minutes.toString().padStart(2, '0')
     dataSeconds.textContent = timeToEnd.seconds.toString().padStart(2, '0')
-    mstimeToEnd -= INTERVAL;
+    msTimeToEnd -= INTERVAL;
     },INTERVAL);
 });
 
