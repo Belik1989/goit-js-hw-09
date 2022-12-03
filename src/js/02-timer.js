@@ -1,7 +1,7 @@
 
-const flatpickr = require("flatpickr");
-import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css"
+
+import flatpickr from 'flatpickr';
+import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
 const timer = document.querySelector(".timer");
@@ -12,6 +12,7 @@ const dataHours = document.querySelector(`.timer [data-hours]`);
 const dataMinutes = document.querySelector(`.timer [data-minutes]`);
 const dataSeconds = document.querySelector(`.timer [data-seconds]`);
 startBtn.classList.add("startBtn");
+
 const currentDate = new Date();
 let timeToEnd = {};
 let msTimeToEnd = null;
