@@ -2,8 +2,7 @@
 const body = document.querySelector("body");
 const startSwitch = document.querySelector('[data-start]');
 const stopSwitch = document.querySelector('[data-stop]');
-// console.log(startSwitch);
-// console.log(stopSwitch);
+
 // Додаємо слухача на кнопки старт та стопs
 startSwitch.addEventListener("click", startRandomizer);
 

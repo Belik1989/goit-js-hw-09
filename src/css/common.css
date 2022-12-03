@@ -16,3 +16,47 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.timer{
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 15px;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.field{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.label{
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: blueviolet;
+}
+.value{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.flatpickr-input{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rebeccapurple;
+  border-color: #212121;
+  border-radius: 4;
+}
+
+.startBtn {
+  position: absolute;
+  height: 28px;
+  width: 50px;
+  margin-left: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight:500;
+  background-color:gray;
+  border-radius: 4;
+}
