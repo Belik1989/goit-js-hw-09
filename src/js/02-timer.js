@@ -4,7 +4,6 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css"
 import Notiflix from 'notiflix';
 
-// Вибираємо необхідні нам елементи з DOM
 const timer = document.querySelector(".timer");
 const dataTimePicker = document.querySelector("#datetime-picker");
 const startBtn = document.querySelector('[data-start]');
@@ -14,8 +13,8 @@ const dataMinutes = document.querySelector(`.timer [data-minutes]`);
 const dataSeconds = document.querySelector(`.timer [data-seconds]`);
 startBtn.classList.add("startBtn");
 const currentDate = Date.now();
-let timeToEnd = {};
-let mstimeToEnd = null;
+// let timeToEnd = {};
+// let mstimeToEnd = null;
 
 const options = {
     enableTime: true,
@@ -42,7 +41,7 @@ const options = {
     }
     function onStartedTimer(selectedDates) {
         let mstimeToEnd = Date.parse(selectedDates) - Date.now();
-    let timeToEnd = convertMs(mstimeToEnd);
+        let timeToEnd = convertMs(mstimeToEnd);
         startBtn.addEventListener('click', () => {
         startBtn.setAttribute('disabled', 'disabled');
         dataTimePicker.setAttribute('disabled', 'disabled');
