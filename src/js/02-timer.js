@@ -13,8 +13,8 @@ const dataMinutes = document.querySelector(`.timer [data-minutes]`);
 const dataSeconds = document.querySelector(`.timer [data-seconds]`);
 startBtn.classList.add("startBtn");
 const currentDate = Date.now();
-// let timeToEnd = {};
-// let mstimeToEnd = null;
+let timeToEnd = {};
+let mstimeToEnd = null;
 
 const options = {
     enableTime: true,
